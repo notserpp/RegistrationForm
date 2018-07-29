@@ -46,11 +46,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="fields-grid">
 					<div class="styled-input">
 						<span class="fa fa-user" aria-hidden="true"></span>
-						<input type="text" placeholder="First Name" name="firstName" required="">
+						<input type="text" placeholder="First Name" name="firstName" required="" maxlength="40">
 					</div>
 					<div class="styled-input">
 						<span class="fa fa-user" aria-hidden="true"></span>
-						<input type="text" placeholder="Last Name" name="lastName" required="">
+						<input type="text" placeholder="Last Name" name="lastName" required="" maxlength="40">
 					</div>
 
 					<div class="styled-input">
@@ -59,15 +59,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="styled-input">
 						<span class="fa fa-lock" aria-hidden="true"></span>
-						<input type="password" placeholder="Enter a password" name="password" required="">
+						<input type="password" placeholder="Enter a password" id="password" required="">
+					</div>
+					<div class="registrationFormAlert" id="divCheckPasswordMatch">
 					</div>
 					<div class="styled-input">
 						<span class="fa fa-lock" aria-hidden="true"></span>
-						<input type="password" placeholder="Confirm password" name="password" required="">
+						<input type="password" placeholder="Confirm password" id="confirmPassword" required="" onChange="checkPasswordMatch();">
+
 					</div>
+
 					<div class="styled-input">
 						<span class="fa fa-phone" aria-hidden="true"></span>
-						<input type="text" placeholder="Phone Number" name="phone number" required="">
+						<input type="text" placeholder="Phone Number" name="phone number" required="" min="0" maxlength="7">
 					</div>
 					<div class="styled-input agile-styled-input-top">
 						<span class="fa fa-book" aria-hidden="true"></span>
@@ -95,15 +99,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<label class="header">Your Address</label>
 						<div class="styled-input">
 
-							<input type="text" name="address" placeholder="Address" title="Please enter your Address" required="">
+							<input type="text" name="address" placeholder="Address" title="Please enter your Address" required="" maxlength="40">
 						</div>
 
 						<div class="styled-input">
 
-							<input type="text" name="city" placeholder="City" title="Please enter your City" required="">
+							<input type="text" name="city" placeholder="City" title="Please enter your City" required="" maxlength="40">
 						</div>
 						<div class="styled-input">
-							<input type="text" name="zip code" placeholder="Zip Code" title="Please enter your Zip code" required="">
+							<input type="text" name="zip code" placeholder="Zip Code" title="Please enter your Zip code" required="" min="0" maxlength="5">
 						</div>
 
 					</div>
@@ -112,30 +116,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clear"> </div>
 
 				</div>
+				<br>
 
-				<br></br>
+				<div class="g-recaptcha" data-sitekey="6LcR0GYUAAAAANp04D3Mt40NRzVLTIw8XPIR-mNG"></div>
+				<br>
 
 				<div class="styled-input-2">
 					<div class="styled-input-3">
-						<div class="styled-input">
 
-							<form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
 
-								<input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
-						</div>
+
+						<div class="registrationFormAlert" /> By clicking Sign up, you agree to the
+						<a href="terms.html" target="_blank">Terms and Conditions</a> and Privacy Policy
+
 					</div>
 				</div>
-
-				<br></br>
-
-				<div class="g-recaptcha" data-sitekey="6LcR0GYUAAAAANp04D3Mt40NRzVLTIw8XPIR-mNG"></div>
-				<input type="submit" value="Submit">
-
-				</form>
 		</div>
 
 
+		<input type="submit" value="Sign Up">
+
 		</form>
+	</div>
+
+
+	</form>
 	</div>
 	</div>
 	<!-- //main -->

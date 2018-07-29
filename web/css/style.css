@@ -59,7 +59,7 @@ h1 img {
     background: rgba(251, 245, 245, 0.13);
 }
 
-.register-form input[type="text"], .register-form input[type="email"], select.category2 {
+.register-form input[type="text"], .register-form input[type="email"], select.category2, .registrationFormAlert {
     font-size: 15px;
     color: #fff;
     border: 0;
@@ -89,6 +89,7 @@ h1 img {
     outline: none;
     font-family: 'Open Sans', sans-serif;
     
+    
 }
 .styled-input {
     border-bottom: 1px solid #f43434;
@@ -99,6 +100,7 @@ h1 img {
 .styled-input-2 {
     background: rgba(8, 8, 8, 0.22);
     padding: 14px;
+    border-bottom: 1px solid #f43434;
 }
 select.category2 {
     width:96%;
