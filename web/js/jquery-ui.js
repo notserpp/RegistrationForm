@@ -176,6 +176,13 @@ $.extend( $.expr[ ":" ], {
 });
 
 // support
+
+function getData() {
+	var firstName = document.getElementById("firstName").value;
+	
+    alert(input);
+}
+
 $(function() {
 	var body = document.body,
 		div = body.appendChild( div = document.createElement( "div" ) );
@@ -9010,19 +9017,10 @@ function extendRemove(target, props) {
 	return target;
 };
 
-function checkPasswordMatch() {
-    var password = $("#password").val();
-    var confirmPassword = $("#confirmPassword").val();
 
-    if (password != confirmPassword)
-        $("#divCheckPasswordMatch").html("Passwords do not match!");
-    else
-        $("#divCheckPasswordMatch").html("Passwords match.");
-}
 
-$(document).ready(function () {
-   $("#confirmPassword").keyup(checkPasswordMatch);
-});
+
+
 
 /* Invoke the datepicker functionality.
    @param  options  string - a command, optionally followed by additional parameters or

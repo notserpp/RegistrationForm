@@ -59,6 +59,15 @@ h1 img {
     background: rgba(251, 245, 245, 0.13);
 }
 
+msg-error {
+    color: #c65848;
+  }
+  .g-recaptcha.error {
+    border: solid 2px #c64848;
+    padding: .2em;
+    width: 19em;
+  }
+
 .register-form input[type="text"], .register-form input[type="email"], select.category2, .registrationFormAlert {
     font-size: 15px;
     color: #fff;
