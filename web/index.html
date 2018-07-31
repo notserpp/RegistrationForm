@@ -8,7 +8,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Registration Form</title>
+	<title>CSC 642 Summer 2018 Individual Assignment Preston Segura Registration form
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Education Admission Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
@@ -40,24 +41,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- main -->
 	<div class="main-agileits">
-		<h1>Registration
+		<h1>CSC 642 Summer 2018 Individual Assignment Preston Segura Registration Form
 
 		</h1>
 		<div class="register-form">
 			<form name="myForm" action="results.php" method="post" onsubmit="return checkform(this);">
 				<div class="fields-grid">
+					<label class="header">Your Information</label>
 					<div class="styled-input">
 						<span class="fa fa-user" aria-hidden="true"></span>
 						<input type="text" placeholder="First Name" name="firstName" required="" maxlength="40">
 					</div>
 					<div class="styled-input">
 						<span class="fa fa-user" aria-hidden="true"></span>
-						<input type="text" placeholder="Last Name" id="lastName" required="" maxlength="40">
+						<input type="text" placeholder="Last Name" name="lastName" required="" maxlength="40">
 					</div>
 
 					<div class="styled-input">
 						<span class="fa fa-envelope-o" aria-hidden="true"></span>
-						<input type="email" placeholder="Your E-mail" id="email" required="">
+						<input type="email" placeholder="Your E-mail" name="email" required="">
 					</div>
 					<div class="styled-input">
 						<span class="fa fa-lock" aria-hidden="true"></span>
@@ -73,26 +75,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<div class="styled-input">
 						<span class="fa fa-phone" aria-hidden="true"></span>
-						<input type="text" placeholder="Phone Number" id="phone" title="7 Digits Required" required pattern="[0-9]{7}">
+						<input type="text" placeholder="Phone Number" name="phone" title="7 Digits Required" required pattern="[0-9]{7}">
 					</div>
 					<div class="styled-input agile-styled-input-top">
 						<span class="fa fa-book" aria-hidden="true"></span>
-						<select class="category2" required="">
-							<option value="">Education Level</option>
-							<option value="">High School</option>
-							<option value="">College</option>
-							<option value="">Graduate Studies</option>
-							<option value="">Ph. D</option>
+						<select class="category2" name="education" required="">
+							<option value="1">Education Level</option>
+							<option value="High School">High School</option>
+							<option value="College">College</option>
+							<option value="Graduate Studies">Graduate Studies</option>
+							<option value="Ph. D">Ph. D</option>
 						</select>
 					</div>
 					<div class="styled-input">
 						<div class="agileits_w3layouts_grid">
 							<span class="fa fa-dollar-sign" aria-hidden="true"></span>
-							<select class="category2" name="category1" required="">
+							<select class="category2" name="salary" required="">
 								<option value="">Yearly Income</option>
-								<option value="">Less than $50k</option>
-								<option value="">Between $50k-$100k</option>
-								<option value="">More than $100k</option>
+								<option value="Less than $50k">Less than $50k</option>
+								<option value="Between $50k-$100k">Between $50k-$100k</option>
+								<option value="More than $100k">More than $100k</option>
 
 							</select>
 						</div>
@@ -158,11 +160,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<input type="submit" value="Sign Up">
 	</div>
-
-
-	</div>
-
-
 
 
 	<!-- //main -->
