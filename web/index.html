@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		</h1>
 		<div class="register-form">
-			<form name="myForm" action="results.php" method="post">
+			<form name="myForm" action="results.php" method="post" onsubmit="return checkform(this);">
 				<div class="fields-grid">
 					<div class="styled-input">
 						<span class="fa fa-user" aria-hidden="true"></span>
@@ -119,8 +119,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 				</div>
 				<br>
-				
-				<div class="g-recaptcha" data-sitekey="6LcR0GYUAAAAANp04D3Mt40NRzVLTIw8XPIR-mNG" id="rcaptcha"></div>
+
+				<!-- START CAPTCHA -->
+				<br>
+				<div class="styled-input">
+					<div class="styled-input-3">
+
+
+						<div id="CaptchaDiv"></div>
+
+						<div class="capbox-inner">
+							Type the above number:
+							<br>
+
+							<input type="hidden" id="txtCaptcha">
+							<input type="text" name="CaptchaInput" id="CaptchaInput" size="15" style="color:black" />
+							<br>
+
+						</div>
+					</div>
+				</div>
+
+
+				<!-- END CAPTCHA -->
+
 				<br>
 
 				<div class="styled-input-2">
@@ -134,8 +156,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 		</div>
-
 		<input type="submit" value="Sign Up">
+	</div>
+
+
 	</div>
 
 
@@ -167,11 +191,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	</script>
 
-	<script>
-		$(function () {
-			$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
-		});
+
+	<script type="text/javascript">
+
+		// Captcha Script
+
+		function checkform(theform) {
+			var why = "";
+
+			if (theform.CaptchaInput.value == "") {
+				why += "- Please Enter CAPTCHA Code.\n";
+			}
+			if (theform.CaptchaInput.value != "") {
+				if (ValidCaptcha(theform.CaptchaInput.value) == false) {
+					why += "- The CAPTCHA Code Does Not Match.\n";
+				}
+			}
+			if (why != "") {
+				alert(why);
+				return false;
+			}
+		}
+
+		var a = Math.ceil(Math.random() * 9) + '';
+		var b = Math.ceil(Math.random() * 9) + '';
+		var c = Math.ceil(Math.random() * 9) + '';
+		var d = Math.ceil(Math.random() * 9) + '';
+		var e = Math.ceil(Math.random() * 9) + '';
+
+		var code = a + b + c + d + e;
+		document.getElementById("txtCaptcha").value = code;
+		document.getElementById("CaptchaDiv").innerHTML = code;
+
+		// Validate input against the generated number
+		function ValidCaptcha() {
+			var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+			var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+			if (str1 == str2) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		// Remove the spaces from the entered and generated code
+		function removeSpaces(string) {
+			return string.split(' ').join('');
+		}
 	</script>
+
 	<!-- //Calendar -->
 
 </body>
